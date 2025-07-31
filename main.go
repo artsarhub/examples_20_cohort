@@ -1,7 +1,8 @@
 package main
 
 import (
-	"examples_20_cohort/debug"
+	"examples_20_cohort/interfaces/logger"
+	"examples_20_cohort/interfaces/zoo"
 )
 
 func main() {
@@ -50,12 +51,34 @@ func main() {
 	*/
 
 	// Debug
+	/*
+		//debug.MissingQuote()
+		//debug.LogicError()
+		//debug.RuntimeError()
+		//debug.Logging()
+		//debug.LoggingLevels()
+		debug.StacktraceReading()
+	*/
+
+	// Pointers
+	/*
+		//pointers.Example1()
+		//pointers.Example2()
+		//pointers.Example3()
+		//pointers.Example4()
+		//test_mem.RunTestMem()
+		pointers.TreeExample()
+	*/
+
+	// Interfaces
 	///*
-	//debug.MissingQuote()
-	//debug.LogicError()
-	//debug.RuntimeError()
-	//debug.Logging()
-	//debug.LoggingLevels()
-	debug.StacktraceReading()
+	log := logger.NewConsoleLogger()
+	//log := logger.NewFileLogger("logs/service.log")
+
+	//log.Info("test info message")
+	//log.Warn("test warn message")
+	//log.Error("test error message")
+
+	zoo.EmulateZoo(log)
 	//*/
 }
