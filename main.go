@@ -1,8 +1,7 @@
 package main
 
 import (
-	"examples_20_cohort/interfaces/logger"
-	"examples_20_cohort/interfaces/zoo"
+	"examples_20_cohort/multithreading"
 )
 
 func main() {
@@ -71,14 +70,32 @@ func main() {
 	*/
 
 	// Interfaces
+	/*
+		log := logger.NewConsoleLogger()
+		//log := logger.NewFileLogger("logs/service.log")
+
+		//log.Info("test info message")
+		//log.Warn("test warn message")
+		//log.Error("test error message")
+
+		zoo.EmulateZoo(log)
+	*/
+
+	// Testing
+	/*
+		todo_server.RunServer()
+	*/
+
+	// Multithreading
 	///*
-	log := logger.NewConsoleLogger()
-	//log := logger.NewFileLogger("logs/service.log")
-
-	//log.Info("test info message")
-	//log.Warn("test warn message")
-	//log.Error("test error message")
-
-	zoo.EmulateZoo(log)
+	//multithreading.RunSay()
+	//multithreading.RunWgWorkers()
+	//multithreading.RunWorkersWithBuffering()
+	//multithreading.RunWorkersWithoutBuffering()
+	//multithreading.RunMutex()
+	//multithreading.RunRWMutex()
+	//multithreading.RunCtxExample()
+	//multithreading.RunDanglingRoutines()
+	multithreading.RunBonus()
 	//*/
 }
