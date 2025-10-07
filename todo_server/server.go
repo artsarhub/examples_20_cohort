@@ -4,14 +4,14 @@ import (
 	"log"
 	"net/http"
 
-	todoshandler "yp-examples/todo_server/internal/handler"
-	"yp-examples/todo_server/internal/repository"
-	"yp-examples/todo_server/pkg"
+	handler2 "examples_20_cohort/todo_server/internal/handler"
+	"examples_20_cohort/todo_server/internal/repository"
+	"examples_20_cohort/todo_server/pkg"
 )
 
 func RunServer() {
 	repo := repository.NewInMemoryRepo()
-	handler := todoshandler.NewTodosHandler(repo)
+	handler := handler2.NewTodosHandler(repo)
 
 	http.Handle("/todos", pkg.CorsMiddleware(pkg.LoggingMiddleware(http.HandlerFunc(handler.GetTodos))))
 	http.Handle("/add", pkg.CorsMiddleware(pkg.LoggingMiddleware(http.HandlerFunc(handler.AddTodo))))

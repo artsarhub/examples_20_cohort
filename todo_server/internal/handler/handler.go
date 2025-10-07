@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"yp-examples/todo_server/internal/model"
+	"examples_20_cohort/todo_server/internal/model"
 )
 
 //go:generate mockgen -package mocks -destination=../../mocks/mock_repository.go yp-examples/todo_server/internal/handler Repository

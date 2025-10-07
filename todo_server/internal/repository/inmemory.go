@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/google/uuid"
+	"examples_20_cohort/todo_server/internal/model"
 
-	"yp-examples/todo_server/internal/model"
+	"github.com/google/uuid"
 )
 
 type InMemoryRepo struct {
